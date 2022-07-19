@@ -65,15 +65,16 @@
                 <input class="rounded" type="text" placeholder="emailname@address" >
             </p>
            <!--  <input class="btn rounded border-0 btn-danger" type="reset" value="Clear Form" placeholder="Clear Form"> -->
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteEntriesModal">Clear Form</button>
-            <button class="btn btn-success " data-bs-toggle="modal" data-bs-target="#confirmEntriesModal"> Submit</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteEntriesModal">Clear Form</button>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#confirmEntriesModal"> Submit</button>
             <!-- Modal Dialogs must be inside the Form to be able to GET the usere response -->
             <!--   Dialog to confirm if entries are to be deleted -->
-            <div class="modal fade modal-md" id="deleteEntriesModal">
-                <div class="modal-dialog">
+            <div class="modal fade" id="deleteEntriesModal">
+                <div class="modal-dialog  modal-md">
                     <div class="modal-content">
                         <div class="modal-header"> 
                             <h4>Oops! </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <h1>Do you really want to clear the entries out?</h1>  
@@ -88,7 +89,7 @@
                         </div>
                         <!-- Buttons to get user response -->
                         <div class="modal-footer">
-                            <button class="btn btn-danger" data-bs-dismiss="modal"> STOP</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> STOP</button>
                             <button class="btn btn-success" data-bs-dismiss="modal" type="reset"> CLEAR IT</button>
                         </div>
                     </div>
@@ -96,23 +97,25 @@
                 </div>
             </div>
           <!--   Dialog to confirm if entries are correct and to be submitted -->
-            <div class="modal fade modal-md" id="confirmEntriesModal">
-                <div class="modal-dialog">
+            <div class="modal fade" id="confirmEntriesModal">
+                <div class="modal-dialog modal-md">
                     <div class="modal-content">
-                        <div class="modal-header"> <h4>Oops!</h4></div>
+                        <div class="modal-header">
+                            <h4>Oops!</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
                             <div class="modal-body ">
                             <h1>Are you sure all entries are correct? Please confirm.</h1>
                            <!--  more elements can be inserted inside the modal body -->
                            <!--      <div class="row col-md-6">
                                     <label>First Name</label>
                                     <input type="text" class="form-control">
-        
-                                </div> -->
+                                 </div> -->
           
                             </div>
                          <!-- Buttons to get user response -->
                         <div class="modal-footer">
-                            <button class="btn btn-danger " data-bs-dismiss="modal"> STOP</button>
+                            <button type="button" class="btn btn-danger " data-bs-dismiss="modal"> STOP</button>
                             <button class="btn btn-success" data-bs-dismiss="modal" type="submit"> GO! </button>
                         </div>
                     </div>
